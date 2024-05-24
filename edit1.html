@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .landing-page {
+            background-color: #3498db;
+            color: #fff;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 36px;
+            animation: fadeIn 2s ease-in-out forwards;
+            opacity: 0;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+            animation: slideIn 2s ease-in-out forwards;
+            opacity: 0;
+        }
+        button {
+            background-color: #fff;
+            color: #3498db;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #f0f0f0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-page">
+        <h1>Welcome!</h1>
+        <p>This is just for you, sweetheart.</p>
+        <button onclick="showMainPage()">Continue</button>
+    </div>
+
+    <div id="mainPage" style="display: none;">
+        <h1>Greetings for Someone Very Dear</h1>
+        <p>Hello, dear friend! It's wonderful to see you i know we have been apart since a long time but i just wanted to tell u that my regards for u still have not changed and i still $$ u i belive god has some better plans for the future  take care thanks a lot always $$$ u .</p>
+    </div>
+
+    <script>
+        function showMainPage() {
+            document.querySelector('.landing-page').style.display = 'none';
+            document.getElementById('mainPage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
